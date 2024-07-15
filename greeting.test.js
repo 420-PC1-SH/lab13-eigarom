@@ -32,4 +32,9 @@ describe("test greeting ", () => {
 		let names = ["Jango", "Boba"];
 		expect(greet(names)).toBe("Hello, Jango and Boba");
 	});
+
+	test('array of three names or more', () => {
+		let names = ["Jill", "Jane", "Leia"];
+		expect(greet(names)).toBe("Hello, Jill, Jane, and Leia");
+	});
 });
