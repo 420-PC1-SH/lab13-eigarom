@@ -4,7 +4,7 @@ function processor(transmission) {
 	}
 	let parts = transmission.split("::");
 	let rawData = parts[1];
-	
+
 	validateIdFormat(parts[0]);
 	validateRawDataFormat(rawData);
 
@@ -27,6 +27,12 @@ function validateRawDataFormat(rawData) {
 		throw new Error('rawData is invalid ; should begin with "<"');
 	} else if (rawData[rawData.length - 1] !== ">") {
 		throw new Error('rawData is invalid ; should end with ">"');
+	}
+
+	for (let i = 1; i < rawData.length - 1; i++) {
+		if (isNaN(rawData[i])) {
+			throw new Error('rawData is invalid ; should contain numbers only between "<" and ">"');
+		}
 	}
 }
 
