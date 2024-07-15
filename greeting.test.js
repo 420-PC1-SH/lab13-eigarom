@@ -22,4 +22,9 @@ describe("test greeting ", function () {
 			expect(greet(name)).toBe("Hello there");
 		});
 	});
+
+	test('uppercase name "HAN" returns "HELLO HAN"', () => {
+		let name = "HAN";
+		expect(greet(name)).toBe("HELLO HAN");
+	});
 });
