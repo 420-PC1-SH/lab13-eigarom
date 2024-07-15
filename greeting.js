@@ -12,7 +12,6 @@ function greet(name) {
 			message = message + name[i] + ", "
 
 		message = message + "and " + name[name.length - 1];
-		console.log(message)
 		return message;
 	}
 
