@@ -22,7 +22,7 @@ describe("transmission processor", function () {
 	test("id should be convertible in number", function () {
 		const expectedError = new Error('id is invalid ; should be convertible in number');
 		expect(() => {
-			processor("x9701::<487297403495720912>");
+			processor("x9701::<489584872710>");
 		}).toThrow(expectedError);
 	})
 
