@@ -19,6 +19,13 @@ describe("transmission processor", function () {
 		expect(result.id).not.toEqual(undefined);
 	});
 
+	test("id should be convertible in number", function () {
+		const expectedError = new Error('id is invalid ; should be convertible in number');
+		expect(() => {
+			processor("x9701::<487297403495720912>");
+		}).toThrow(expectedError);
+	})
+
 	test("converts id to a number", function () {
 		let result = processor("9701::<489584872710>");
 		expect(result.id).toEqual(9701);
